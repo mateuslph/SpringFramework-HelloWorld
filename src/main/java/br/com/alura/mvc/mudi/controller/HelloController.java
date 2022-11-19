@@ -1,7 +1,5 @@
 package br.com.alura.mvc.mudi.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +15,7 @@ public class HelloController {
 	
 	@GetMapping("/hello")
 	public String hello(Model model) {  // assim eh mais usado, com o Model, nao precisa usar a camada mais a baixo (HttpServeletRequest)
-		model.addAttribute("nome", "Mundo");
+		model.addAttribute("nome", "Mundo");  // nome eh a referencia no html (thymeleaf), e Mundo eh a variavel a passar
 		return "hello";		
 	}
 
